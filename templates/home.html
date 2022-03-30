@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <form name="form1" action="/loginPage1" method="POST" autocomplete="off">
+        <div id="login_container">
+            <h2 id="login_header">LOGIN</h2>
+            <div id="login_bg">
+                <input type="text" placeholder="Username" maxlength="50" id="username" name="username" onclick="validateName()" required/><br>
+                <input type="password" placeholder="Password" maxlength="20" id="password" name="password" onkeyup="check_password(this)" required/>
+                <button href="" id="login_btn" type="submit" href="{{url_for('loginPage1')}}">
+                    LOG IN
+                </button>
+                <h5 id="register_user">Newuser?<a id="reg_user" href="{{ url_for('register') }}">Register</a></h5>
+
+            </div>
+        </div>
+    </form>
+    <Script src="/static/js/script.js"></Script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* registeration-form */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,100&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            background-image: url("https://images.unsplash.com/photo-1627637819794-fba32f82be16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #register_container {
+            display: inline-block;
+            margin: 10% 34%;
+            border-radius: 10px;
+            background-color: rgba(230, 225, 225, 0.6);
+            width: 500px;
+            height: 540px;
+            backdrop-filter: blur(6px);
+        }
+        
+        #reg_header {
+            text-transform: uppercase;
+            color: #030735;
+            margin: 40px 10px -40px 10px;
+            font-size: 4vh;
+            text-align: center;
+        }
+        
+        #reg_bg {
+            margin: 15% 19%;
+        }
+        
+        input {
+            width: 300px;
+            /* background-color: #030735; */
+            border-style: hidden;
+            height: 45px;
+            padding: 0 10px;
+            border-style: unset;
+            border-radius: 5px;
+            /* border-color: rgba(233, 117, 208, 0.856); */
+            margin-bottom: 30px;
+        }
+        
+        input:hover {
+            border-color: azure;
+        }
+        
+        #reg_btn {
+            width: 130px;
+            height: 40px;
+            background-color: #030735;
+            color: rgba(230, 225, 225, 0.938);
+            text-transform: uppercase;
+            border-radius: 20px;
+            /* background-color: rgba(19, 129, 239, 0.973); */
+            border-color: #030735;
+            border-style: solid;
+            font-weight: 500;
+            margin: 5% 30%;
+        }
+        
+        #reg_btn:hover {
+            color: black;
+            transition: 1s;
+            background-color: rgba(19, 129, 239, 0.973);
+            /* background-color: aliceblue; */
+            border-color: rgba(19, 129, 239, 0.973);
+        }
+        
+        #reg_user {
+            color: aliceblue;
+            text-decoration: none;
+            cursor: pointer;
+            padding-left: 5px;
+        }
+        
+        #register_user {
+            color: aliceblue;
+            text-align: center;
+            margin-top: 18px;
+            font-weight: 200;
+            font-size: 13px;
+        }
+        
+        #reg_user:hover {
+            color: #030735;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="register_form" action="/regPage" method="POST" onsubmit="validate()">
+        <div id="register_container">
+            <h2 id="reg_header">Register</h2>
+            <div id="reg_bg">
+                <input type="text" maxlength="20" id="username" name="username" placeholder="Name" required/><br>
+                <input type="email" id="email" name="email" placeholder="Email Address" required/><br>
+                <input type="password" maxlength="20" id="password" placeholder="Password" name="password" required/>
+                <input type="password" maxlength="20" id="cpassword" name="cpassword" placeholder=" Confirm Password" name="password" onkeyup="check_password(this)" required/>
+                <button id="reg_btn" href="{{url_for('loginPage1')}}">
+                    Register
+                </button>
+                <h5 id="register_user">Already have an account?<a id="reg_user" href="{{ url_for('login') }}">Login</a></h5>
+
+            </div>
+        </div>
+    </form>
+    <Script src="/static/js/reg.js"></Script>
+
+</body>
+
+</html>
