@@ -35,7 +35,7 @@ Now, you are able to use all the blocks exported by the Login app. Check out the
 
 - [SQLite] - A light weigth datadase
 - [Flask] - A python Web Frame work
-- [Bootstrap] - great UI boilerplate for modern web apps
+- [html,css,js] - A begginer level web page from the scratch 
 
 
 
@@ -46,7 +46,7 @@ This Login page uses [Flask] to connect to the database.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-python3 app.py
+python3 web.py
 flask run
 
 ```
